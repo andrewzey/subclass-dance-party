@@ -13,6 +13,32 @@ MakeBlinkyDancer.prototype.step = function(){
   this.$node.toggle();
 };
 
+var Pikachu = function(top, left, timeBetweenSteps){
+  MakeBlinkyDancer.apply(this, arguments);
+  this.$node.addClass('pikachu');
+  this.$node.find('img').attr('src', 'assets/images/pikachu.png');
+};
+
+Pikachu.prototype = Object.create(MakeBlinkyDancer.prototype);
+Pikachu.prototype.constructor = Pikachu;
+
+// add animation to replace this.$node.toggle();
+// Pikachu.prototype.step = function(){
+// };
+
+
+var Snorlax = function(top, left, timeBetweenSteps){
+  MakeBlinkyDancer.apply(this, arguments);
+  this.$node.addClass('snorlax');
+  this.$node.find('img').attr('src', 'assets/images/snorlax.gif');
+};
+
+Snorlax.prototype = Object.create(MakeBlinkyDancer.prototype);
+Snorlax.prototype.constructor = Snorlax;
+
+// add animation to replace this.$node.toggle();
+// Snorlax.prototype.step = function(){
+// };
 
 //FUNCTIONAL INSTANTIATION
 // var MakeBlinkyDancer = function(top, left, timeBetweenSteps){

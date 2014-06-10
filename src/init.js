@@ -17,6 +17,29 @@ $(document).ready(function(){
      */
     var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
 
+    if ($(this).data("dancer-maker-function-name") === "MakeBlinkyDancer") {
+      if (Math.round(Math.random())){
+        dancerMakerFunctionName = "Pikachu";
+      } else {
+        dancerMakerFunctionName = "Snorlax";
+      }
+    }
+
+    if ($(this).data("dancer-maker-function-name") === "MakePopDancer") {
+      if (Math.round(Math.random())){
+        dancerMakerFunctionName = "Kanye";
+      } else {
+        dancerMakerFunctionName = "Bieber";
+      }
+    }
+
+    if ($(this).data("dancer-maker-function-name") === "MakeSuperheroDancer") {
+      if (Math.round(Math.random())){
+        dancerMakerFunctionName = "Batman";
+      } else {
+        dancerMakerFunctionName = "Ironman";
+      }
+    }
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
@@ -24,8 +47,8 @@ $(document).ready(function(){
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction( //MakeNewBlinkyDancer
-      $("body").height() * Math.random() - 20,
-      $("body").width() * Math.random() - 20,
+      $("body").height() * Math.random() - 200,
+      $("body").width() * Math.random() - 200,
       Math.random() * 1000
     );
     $('body').append(dancer.$node);

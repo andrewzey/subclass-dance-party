@@ -37,18 +37,45 @@ background-size: cover;
   background-color: rgba(150,150,150,.5);
 }
 .dancer{
-  border-radius:10px;
   position:absolute;
 }
 
-.blinky {
-  border:10px solid red;
+.dancer img {
+  width: 175px;
+  height: auto;
 }
+
+.blinky {
+}
+
+  .pikachu img {
+
+
+  }
+
+  .snorlax img {
+
+  }
 
 .pop {
-  border:10px solid blue;
 }
 
+  .kanye img {
+
+  }
+
+  .bieber img {
+
+  }
+
+
 .superhero {
-  border:10px solid green;
 }
+
+  .batman img {
+
+  }
+
+  .ironman img {
+
+  }
