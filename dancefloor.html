@@ -8,10 +8,15 @@
     <script src="src/blinkyDancer.js"></script>
     <script src="src/popDancer.js"></script>
     <script src="src/superheroDancer.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
   </head>
   <body>
+    <video autoplay loop poster="assets/background.png" id="bgvid">
+      <source src="assets/background.mp4" type="video/mp4">
+    </video>
     <div class="topbar">
-      <span class="title">object dance party</span>
+      <span class="title">Bandrew Dance Party</span>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeBlinkyDancer">Add a Blink Dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakePopDancer">Add a Pop Dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeSuperheroDancer">Add a Superhero Dancer</a>

@@ -1,5 +1,6 @@
 body, html{
   height:100%;
+  font-family: 'Bubblegum Sans', cursive;
 }
 body{
   margin: 0px;
@@ -8,17 +9,32 @@ body{
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+  text-decoration: none;
 }
+
+a:hover {
+  font-size: 1.2em;
+  color: white;
+}
+
+video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background: url(assets/background.png) no-repeat;
+background-size: cover;
+}
+
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: rgba(150,150,150,.5);
 }
 .title{
-  background-color: #777;
+  background-color: rgba(150,150,150,.5);
 }
 .dancer{
   border-radius:10px;
