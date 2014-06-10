@@ -22,9 +22,9 @@ var Pikachu = function(top, left, timeBetweenSteps){
 Pikachu.prototype = Object.create(MakeBlinkyDancer.prototype);
 Pikachu.prototype.constructor = Pikachu;
 
-// add animation to replace this.$node.toggle();
-// Pikachu.prototype.step = function(){
-// };
+Pikachu.prototype.step = function(){
+
+};
 
 
 var Snorlax = function(top, left, timeBetweenSteps){
@@ -36,9 +36,8 @@ var Snorlax = function(top, left, timeBetweenSteps){
 Snorlax.prototype = Object.create(MakeBlinkyDancer.prototype);
 Snorlax.prototype.constructor = Snorlax;
 
-// add animation to replace this.$node.toggle();
-// Snorlax.prototype.step = function(){
-// };
+Snorlax.prototype.step = function(){
+};
 
 //FUNCTIONAL INSTANTIATION
 // var MakeBlinkyDancer = function(top, left, timeBetweenSteps){

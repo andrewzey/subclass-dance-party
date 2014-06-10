@@ -21,9 +21,18 @@ var Ironman = function(top, left, timeBetweenSteps){
 Ironman.prototype = Object.create(MakeSuperheroDancer.prototype);
 Ironman.prototype.constructor = Ironman;
 
-// add animation to replace this.$node.toggle();
-// Ironman.prototype.step = function(){
-// };
+Ironman.prototype.step = function(){
+  var bounceTime = 200;
+  var bounceLength = 100;
+  var context = this;
+
+  this.$node.animate({'top': this._top - bounceLength}, bounceTime, 'linear', function() {
+    context.$node.animate({'top': context._top + bounceLength}, bounceTime, 'linear', function(){
+      setInterval(context.step.bind(context), 1000);
+    });
+  });
+
+};
 
 
 
@@ -36,7 +45,17 @@ var Batman = function(top, left, timeBetweenSteps){
 Batman.prototype = Object.create(MakeSuperheroDancer.prototype);
 Batman.prototype.constructor = Batman;
 
-// add animation to replace this.$node.toggle();
-// Batman.prototype.step = function(){
-// };
+Batman.prototype.step = function(){
+  var bounceTime = 200;
+  var bounceLength = 100;
+  var context = this;
+
+  this.$node.animate({'left': this._left - bounceLength}, bounceTime, 'linear', function() {
+    context.$node.animate({'left': context._left + bounceLength}, bounceTime, 'linear', function(){
+      setInterval(context.step.bind(context), 1000);
+    });
+  });
+
+};
+
 
