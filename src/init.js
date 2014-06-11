@@ -51,7 +51,21 @@ $(document).ready(function(){
       $("body").width() * Math.random() - 200,
       Math.random() * 1000
     );
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
+
+  });
+
+  $(".lineupButton").on("click", function(event){
+    var lineup = function(){
+      if (window.dancers.length) {
+        for (var i = 0; i < window.dancers.length; i++) {
+          window.dancers[i].setPosition(300, this._left);
+        }
+      } else {
+        alert("You are dumb. Add some dancers first!");
+      }
+    };
+    lineup();
   });
 });
-
